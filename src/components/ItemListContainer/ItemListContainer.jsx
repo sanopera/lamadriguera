@@ -1,9 +1,15 @@
 import React from 'react'
 
-function ItemListContainer() {
+
+
+function ItemListContainer({bienvenida}) {
+    
+    const Stock = 10
+    
     return (
+        
         <div>
-            <center>Hola soy una Lista</center>
+            <h1><center>{bienvenida}</center></h1>
         </div>
     )
 }

@@ -1,17 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBarBS from './components/NavBar/NavBarBS';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemCount from './components/ItemCount/ItemCount';
 
 
 function App() {
+
+  const bienvenida = "Bienvenidos/as a mi tienda"
+
   return (
 
     <div>
       <NavBarBS />
-      <ItemListContainer />
+      <ItemListContainer bienvenida = {bienvenida} />
+      <ItemCount min = {1} max={10} />
 
     </div>
     
