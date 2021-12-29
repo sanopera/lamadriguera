@@ -15,7 +15,6 @@ function App() {
     <div>
       <NavBarBS />
       <ItemListContainer bienvenida = {bienvenida} />
-      <ItemCount min = {1} max={10} />
 
     </div>
     
