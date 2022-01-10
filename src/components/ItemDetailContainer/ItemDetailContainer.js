@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import {getFetch} from '../Productos/Productos.js'
 
@@ -7,14 +8,20 @@ function ItemDetailContainer () {
     const [producto, setproducto] = useState({})
     const [loading, setloading] = useState(true)
 
+    const {idDetalle} = useParams()
+
 
     useEffect(() => {
 
-        getFetch
-        .then(resp => setproducto(resp.find(prod => prod.id === 1)))
-        .finally(()=> setloading(false))
+        if (idDetalle) {
+         
+            getFetch
+            .then(resp => setproducto(resp.find(prod => prod.title === idDetalle)))
+            .finally(()=> setloading(false))
 
-    }, [])
+        } 
+
+    }, [idDetalle])
 
     return (
         <div>

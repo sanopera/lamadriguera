@@ -2,6 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
+import ItemCount from "../ItemCount/ItemCount";
 import './ItemDetail.css'
 
 function ItemDetail({ producto }) {
@@ -20,10 +21,10 @@ function ItemDetail({ producto }) {
           <ListGroupItem>{producto.price}</ListGroupItem>
           <ListGroupItem>Datelle 1</ListGroupItem>
           <ListGroupItem>Detalle 2</ListGroupItem>
+          <ItemCount min={1} max={10} />
         </ListGroup>
         <Card.Body>
-          <Card.Link href="#">Card Link</Card.Link>
-          <Card.Link href="#">Another Link</Card.Link>
+          <Card.Link href="#">Agregar al Carrito</Card.Link>
         </Card.Body>
       </Card>
     </div>
