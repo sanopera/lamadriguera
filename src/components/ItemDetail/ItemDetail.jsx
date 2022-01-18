@@ -1,19 +1,23 @@
-import { useState, Link } from 'react'
+import React from 'react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
-import ItemCount from "../ItemCount/ItemCount";
+import Button from 'react-bootstrap/Button';
+import ItemCount from '../ItemCount/ItemCount.jsx';
 import './ItemDetail.css'
 
-function ItemDetail({ producto }) {
+const ItemDetail = ({ producto }) => {
 
-  const [show, setShow] = useState(true)
+  const [show, setshow] = useState(true)
 
-  const onAdd = (counter) =>
+  const onAdd = () =>
   {
-    setShow(false)
+    setshow(false)
   }
 
+  console.log(show);
 
   return (
     <div className="detalle">
@@ -32,11 +36,18 @@ function ItemDetail({ producto }) {
           <ListGroupItem>Datelle 1</ListGroupItem>
           <ListGroupItem>Detalle 2</ListGroupItem>
 
-          {show ? <ItemCount min={1} max={10} onAdd={onAdd} /> : <Link to='/'><button>Terminar la Compra</button></Link>
-
-        }
-
         </ListGroup>
+        <div>
+          {show ? <ItemCount min={1} max={10} onAdd={onAdd}/> : 
+          
+          <div className='boton'>
+            <center><Link to='/cart'><Button>Terminar la compra</Button></Link>
+            <Link to='/'><Button>Continuar la Compra</Button></Link></center>
+          </div>
+          }
+        </div>
+        
+
       </Card>
     </div>
   );

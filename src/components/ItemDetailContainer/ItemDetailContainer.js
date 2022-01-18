@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import ItemDetail from '../ItemDetail/ItemDetail'
+import ItemDetail from '../ItemDetail/ItemDetail.jsx'
 import {getFetch} from '../Productos/Productos.js'
 
 function ItemDetailContainer () {

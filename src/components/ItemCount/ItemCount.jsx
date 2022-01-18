@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React  from "react";
+import { useState } from "react";
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
 import './ItemCount.css';
 
 
-
-function ItemCount({min, max, onAdd}) {
+function ItemCount ({min, max, onAdd}) {
 
 
     const [counter, setcounter] = useState(min)
@@ -21,8 +21,6 @@ function ItemCount({min, max, onAdd}) {
         
     }
 
-    
-
   return (
     <div className="contador">
 
@@ -30,9 +28,9 @@ function ItemCount({min, max, onAdd}) {
         <Button variant="secondary" onClick={handleDecrement}>-</Button>
         <Button variant="secondary">{counter}</Button>
         <Button variant="secondary" onClick={handleIncrement}>+</Button>
-        <Button onClick={onAdd}>Agregar al Carrito</Button>
+        
       </ButtonGroup>
-      
+      <Button onClick={onAdd}> Agregar al Carrito</Button>
 
     </div>
 
