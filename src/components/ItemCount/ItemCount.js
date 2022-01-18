@@ -5,7 +5,7 @@ import './ItemCount.css';
 
 
 
-function ItemCount({min, max}) {
+function ItemCount({min, max, onAdd}) {
 
 
     const [counter, setcounter] = useState(min)
@@ -21,6 +21,7 @@ function ItemCount({min, max}) {
         
     }
 
+    
 
   return (
     <div className="contador">
@@ -29,8 +30,15 @@ function ItemCount({min, max}) {
         <Button variant="secondary" onClick={handleDecrement}>-</Button>
         <Button variant="secondary">{counter}</Button>
         <Button variant="secondary" onClick={handleIncrement}>+</Button>
+        <Button onClick={onAdd}>Agregar al Carrito</Button>
       </ButtonGroup>
+      
+
     </div>
+
+
+    
+
   );
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, Link } from 'react'
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
@@ -6,6 +6,15 @@ import ItemCount from "../ItemCount/ItemCount";
 import './ItemDetail.css'
 
 function ItemDetail({ producto }) {
+
+  const [show, setShow] = useState(true)
+
+  const onAdd = (counter) =>
+  {
+    setShow(false)
+  }
+
+
   return (
     <div className="detalle">
 
@@ -17,15 +26,17 @@ function ItemDetail({ producto }) {
             {producto.descripcion}
           </Card.Text>
         </Card.Body>
+
         <ListGroup className="list-group-flush">
           <ListGroupItem>{producto.price}</ListGroupItem>
           <ListGroupItem>Datelle 1</ListGroupItem>
           <ListGroupItem>Detalle 2</ListGroupItem>
-          <ItemCount min={1} max={10} />
+
+          {show ? <ItemCount min={1} max={10} onAdd={onAdd} /> : <Link to='/'><button>Terminar la Compra</button></Link>
+
+        }
+
         </ListGroup>
-        <Card.Body>
-          <Card.Link href="#">Agregar al Carrito</Card.Link>
-        </Card.Body>
       </Card>
     </div>
   );
