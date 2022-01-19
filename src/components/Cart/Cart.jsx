@@ -15,7 +15,7 @@ export const Cart = () => {
         <div>
 
             <ListGroup className='lista'>
-            <ListGroup.Item><center>{cartList.map(prod => <li key={prod.id}>{prod.title} {prod.cantidad}  {prod.price} <img src={prod.pictureUrl} width="70" /></li>)}</center></ListGroup.Item>
+            <ListGroup.Item><center>{cartList.map(prod => <li key={prod.id}><b>Nombre:</b> {prod.title} <b>Cantidad:</b> {prod.cantidad}  <b>Precio:</b> {prod.price} <img src={prod.pictureUrl} width="70" /></li>)}</center></ListGroup.Item>
             </ListGroup>
 
                 <center><Button onClick={vaciarCarrito} className='vaciar'>Vaciar Carrito</Button></center>
