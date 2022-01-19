@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemDetail from '../ItemDetail/ItemDetail.jsx'
 import {getFetch} from '../Productos/Productos.js'
+import Spinner from '../Spinner/Spinner.js';
 
 function ItemDetailContainer () {
 
@@ -25,7 +26,7 @@ function ItemDetailContainer () {
 
     return (
         <div>
-            {loading ? ""  : <ItemDetail producto = {producto} /> }
+            {loading ? <Spinner />  : <ItemDetail producto = {producto} /> }
         </div>
     )
 }

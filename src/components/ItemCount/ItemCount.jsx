@@ -30,7 +30,7 @@ function ItemCount ({min, max, onAdd}) {
         <Button variant="secondary" onClick={handleIncrement}>+</Button>
         
       </ButtonGroup>
-      <Button onClick={onAdd}> Agregar al Carrito</Button>
+      <Button onClick={() => onAdd(counter)}> Agregar al Carrito</Button>
 
     </div>
 

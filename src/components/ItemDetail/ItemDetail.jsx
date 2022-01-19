@@ -7,17 +7,24 @@ import ListGroupItem from "react-bootstrap/ListGroupItem";
 import Button from 'react-bootstrap/Button';
 import ItemCount from '../ItemCount/ItemCount.jsx';
 import './ItemDetail.css'
+import { useContext } from 'react';
+import { CartContext } from '../../context/cartContext.jsx';
 
 const ItemDetail = ({ producto }) => {
 
+  const  { cartList, agregarAlCarrito } = useContext(CartContext)
+
   const [show, setshow] = useState(true)
 
-  const onAdd = () =>
+  console.log(cartList)
+
+  const onAdd = (counter) =>
   {
-    setshow(false)
+    setshow(false);
+    agregarAlCarrito({...producto, cantidad: counter})
+
   }
 
-  console.log(show);
 
   return (
     <div className="detalle">
