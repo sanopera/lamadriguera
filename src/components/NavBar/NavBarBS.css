@@ -3,3 +3,12 @@
     outline: none;
     color: white;
 }
+
+.contador2{
+    margin-left: 0.1em;
+    color: white;
+    background-color: rgb(105, 104, 105);
+    padding: 0.1em;
+    border-radius: 100%;
+    width: 1.2em;
+}

@@ -10,19 +10,18 @@ import './ItemDetail.css'
 import { useContext } from 'react';
 import { CartContext } from '../../context/cartContext.jsx';
 
+
 const ItemDetail = ({ producto }) => {
 
-  const  { cartList, agregarAlCarrito } = useContext(CartContext)
+  const  { cartList, agregarAlCarrito, mostrarCantidad } = useContext(CartContext)
 
   const [show, setshow] = useState(true)
 
-  console.log(cartList)
 
   const onAdd = (counter) =>
   {
     setshow(false);
     agregarAlCarrito({...producto, cantidad: counter})
-
   }
 
 
@@ -48,8 +47,8 @@ const ItemDetail = ({ producto }) => {
           {show ? <ItemCount min={1} max={10} onAdd={onAdd}/> : 
           
           <div className='boton'>
-            <center><Link to='/cart'><Button>Terminar la compra</Button></Link>
-            <Link to='/'><Button>Continuar la Compra</Button></Link></center>
+            <center><Link to='/cart'><Button>Ir al carrito</Button></Link>
+            <Link to='/'><Button>Continuar comprando</Button></Link></center>
           </div>
           }
         </div>

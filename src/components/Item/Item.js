@@ -14,7 +14,7 @@ function Item({ titulo, precio, foto }) {
 
         <Card.Body >
           <Card.Title>{titulo}</Card.Title>
-          <Card.Text>{precio}</Card.Text>
+          <Card.Text>${precio}</Card.Text>
 
           <Link to={`/detalle/${titulo}`}>
             <center>

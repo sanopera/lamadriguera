@@ -6,9 +6,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import CartWidget from "./CartWidget";
 import './NavBarBS.css';
-
+import { CartContext } from '../../context/cartContext.jsx';
+import { useContext } from 'react';
 
 const NavBarBS = () => {
+
+    const  { totalCantidad } = useContext(CartContext)
+
     return (
 
         <Navbar bg="dark" variant="dark">
@@ -21,12 +25,16 @@ const NavBarBS = () => {
                     <Nav.Link> <Link to="/categoria/Funko" className="Link">Funko</Link> </Nav.Link>                 
                 </Nav>
 
+                {totalCantidad() === 0 ? (<div>
+
+                </div>) : (
+                <div className="posicion-carrito">
                 <Link to='/cart'>
                 <CartWidget />
                 </Link>
-                
-
-
+                <center><h6 className="contador2">{totalCantidad()}</h6></center>
+                </div>
+                )}
             </Container>
         </Navbar>
     )
