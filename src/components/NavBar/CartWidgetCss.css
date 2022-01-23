@@ -2,3 +2,10 @@
     color: white;
     font-size: 1.3em;
 }
+
+.posicion-carrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
