@@ -9,22 +9,36 @@ import { getFirestore, query, collection, getDocs, where } from 'firebase/firest
 
 function ItemListContainer({bienvenida}) {
     
-    const [prod, setprod] = useState([])
-    const [loading, setloading] = useState(true)
+    const [prod, setprod] = useState([]);
+    const [loading, setloading] = useState(true);
 
-    const {idCategoria} = useParams()
+    const {idCategoria} = useParams();
     
     
     useEffect(() => {
 
-       /* const db = getFirestore()
-        const queryCollection = query(collection(db, 'productos'), where('price', '==' , 1000)
+
+        if(idCategoria){
+
+        const db = getFirestore();
+        const queryCollection = query(collection(db, 'productos'), where('categoria', '==' , idCategoria))
 
         getDocs(queryCollection)
         .then(res => setprod( res.docs.map(prod => ({id: prod.id, ...prod.data() }) ) ))
-        console.log(prod)*/
+        setloading(false);
 
-        if (idCategoria) {
+        }else{
+              const db = getFirestore();
+                const queryCollection = collection(db, 'productos')
+
+                getDocs(queryCollection)
+                .then(res => setprod( res.docs.map(prod => ({id: prod.id, ...prod.data() }) ) ))
+                setloading(false);
+
+        }
+           
+
+        /*if (idCategoria) {
 
         getFetch
         .then(resp => setprod(resp.filter(prod => prod.categoria === idCategoria)))
@@ -38,11 +52,9 @@ function ItemListContainer({bienvenida}) {
         .catch(err => console.log(err))
         .finally(()=> setloading(false))
             
-        }
-        
-    }, [idCategoria])
+        }*/
+    }, [idCategoria]);
 
-    console.log(idCategoria)
 
 
     return (

@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import "./Item.css";
 
-function Item({ titulo, precio, foto }) {
+function Item({ titulo, precio, foto, id }) {
   return (
     
     <div className="tarjeta">
@@ -16,7 +16,7 @@ function Item({ titulo, precio, foto }) {
           <Card.Title>{titulo}</Card.Title>
           <Card.Text>${precio}</Card.Text>
 
-          <Link to={`/detalle/${titulo}`}>
+          <Link to={`/detalle/${id}`}>
             <center>
               <Button variant="primary">Detalle de Producto</Button>
             </center>
