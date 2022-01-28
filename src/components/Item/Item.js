@@ -23,6 +23,7 @@ function Item({ titulo, precio, foto, id }) {
           </Link>
         </Card.Body>
       </Card>
+
     </div>
   );
 }
