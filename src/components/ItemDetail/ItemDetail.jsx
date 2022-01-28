@@ -41,7 +41,11 @@ const ItemDetail = ({ producto }) => {
           <ListGroupItem>Datelle 1</ListGroupItem>
           <ListGroupItem>Detalle 2</ListGroupItem>
 
+          
+
         </ListGroup>
+
+        
         <div>
           {show ? <ItemCount min={1} max={10} onAdd={onAdd}/> : 
           
@@ -54,6 +58,8 @@ const ItemDetail = ({ producto }) => {
         
 
       </Card>
+
+      
     </div>
   );
 }
