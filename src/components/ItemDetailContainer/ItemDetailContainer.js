@@ -21,13 +21,6 @@ function ItemDetailContainer () {
         getDoc(queryProd).then((resp) => { setproducto({id: resp.id, ...resp.data() }) })
         setloading(false)
 
-        /*if (idDetalle) {
-         
-            getFetch
-            .then(resp => setproducto(resp.find(prod => prod.title === idDetalle)))
-            .finally(()=> setloading(false))
-
-        } */
 
     }, [idDetalle])
 
