@@ -9,7 +9,7 @@ function Item({ titulo, precio, foto, id }) {
     
     <div className="tarjeta">
 
-      <Card style={{ width: "18rem" }}>
+        <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={foto} />
 
         <Card.Body >
