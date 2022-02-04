@@ -8,6 +8,7 @@ import { CartContext } from "../../context/cartContext";
 import "./Cart.css";
 import Resume from "../Resume/Resume";
 import { FaHandPointDown  } from "react-icons/fa";
+import { FaRegSadCry } from "react-icons/fa";
 
 export const Cart = () => {
   const { cartList, vaciarCarrito, totalPrecio, totalCantidad, eliminarProducto } = useContext(CartContext);
@@ -72,7 +73,7 @@ export const Cart = () => {
               <div>
                 {totalCantidad() === 0 ? (
                   <div className="carritoVacio">
-                    <h3>Aun no agregaste nada :(</h3>
+                    <h3>Aun no agregaste nada <FaRegSadCry/></h3>
                     <Link to="/">
                       <Button>Ir al catalogo</Button>
                     </Link>
