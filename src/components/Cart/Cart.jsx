@@ -7,6 +7,7 @@ import { useContext, useState } from "react";
 import { CartContext } from "../../context/cartContext";
 import "./Cart.css";
 import Resume from "../Resume/Resume";
+import { FaHandPointDown  } from "react-icons/fa";
 
 export const Cart = () => {
   const { cartList, vaciarCarrito, totalPrecio, totalCantidad, eliminarProducto } = useContext(CartContext);
@@ -97,32 +98,32 @@ export const Cart = () => {
 
                     <center><Link to="/"><Button>Continuar comprando</Button></Link> <Button onClick={vaciarCarrito} className="vaciar">Vaciar Carrito</Button></center>
 
-                    <center><form onSubmit={realizarCompra}>
+                    <center><br /><h3>Completa tus datos para terminar la compra <FaHandPointDown /></h3><form onSubmit={realizarCompra}>
                 <br /><input
                   type='text'
                   name='name'
-                  placeholder='name'
+                  placeholder='             Nombre'
                   onChange={handleChange}
                   value={dataForm.name}
                 /><br />
                 <input
                   type='text'
                   name='phone'
-                  placeholder='tel'
+                  placeholder='             Telefono'
                   onChange={handleChange}
                   value={dataForm.phone}
                 /><br />
                 <input
                   type='email'
                   name='email'
-                  placeholder='email'
+                  placeholder='              Email'
                   onChange={handleChange}
                   value={dataForm.email}
                 /><br />
                 <input
                   type='text'
                   name='address'
-                  placeholder='address'
+                  placeholder='             Direccion'
                   onChange={handleChange}
                   value={dataForm.address}
                 /><br />
