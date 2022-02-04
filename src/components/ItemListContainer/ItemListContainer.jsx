@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { getFirestoreApp } from '../../firebase/dbConfig';
 import ItemList from '../ItemList/ItemList';
-import {getFetch} from '../Productos/Productos.js'
 import Spinner from '../Spinner/Spinner.js';
 import { getFirestore, query, collection, getDocs, where } from 'firebase/firestore'
+import { getFetch } from '../Productos/Productos';
 
 
 function ItemListContainer({bienvenida}) {
@@ -31,9 +30,11 @@ function ItemListContainer({bienvenida}) {
               const db = getFirestore();
                 const queryCollection = collection(db, 'productos')
 
+                
                 getDocs(queryCollection)
                 .then(res => setprod( res.docs.map(prod => ({id: prod.id, ...prod.data() }) ) ))
-                setloading(false);
+                getFetch
+                .finally(()=> setloading(false))
 
         }
            
@@ -53,6 +54,7 @@ function ItemListContainer({bienvenida}) {
         .finally(()=> setloading(false))
             
         }*/
+
     }, [idCategoria]);
 
 
@@ -60,7 +62,6 @@ function ItemListContainer({bienvenida}) {
     return (
 
         <div>
-            <h1><center>{bienvenida}</center></h1>
 
             {loading ? <Spinner /> : <ItemList productos = {prod}/>}
 
