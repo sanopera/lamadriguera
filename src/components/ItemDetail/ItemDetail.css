@@ -9,3 +9,7 @@
   Button{
     margin: 0.25em
   }
+
+  .centro{
+    align-items: center;
+  }

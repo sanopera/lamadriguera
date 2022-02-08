@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Ecommerce de La Madriguera 
+En este proyecto encontraras implementadas todas herramientas y habilidades adquiridas a lo largo del curso de React dictado en la plataforma CoderHouse. 
+Se genera una Ecommerce completa con una instancia de muestra de productos, categorización, seleccion y generación de compra.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Comenzando 🚀
+Para obtener una copia del proyecto puede hacerlo desde este link (https://github.com/sanopera/lamadriguera)
 
-In the project directory, you can run:
+## Pre-requisitos 📋
+Para poder utilizar este proyecto deberia contar con:
+ • Node JS
+ • React-Boostrap
+ • React Icons
+ • Firebase
 
-### `npm start`
+## Instalación
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ • Node JS
+    Descargar el software de (https://nodejs.org/es/download/) y continuar el Wizard 🧙‍♂️
+ 
+ • React-Boostrap
+    npm install react-bootstrap bootstrap@5.1.3 por consola dentro de tu proyecto por medio de tu editor de codigo.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ • React Icons
+    npm install react-icons --save por consola dentro de tu proyecto por medio de tu editor de codigo.
 
-### `npm test`
+ • Firebase
+    npm install firebase por consola dentro de tu proyecto por medio de tu editor de codigo.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Markdown has enumation and nested lists.
 
-### `npm run build`
+## Construido con 🛠️
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+•   Nombre: Auto Close Tag
+    ID: formulahendry.auto-close-tag
+    Descripción: Automatically add HTML/XML close tag, same as Visual Studio IDE or Sublime Text
+    Versión: 0.5.13
+    Editor: Jun Han
+    Vínculo de VS Marketplace: https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+•   Nombre: ES7+ React/Redux/React-Native snippets
+    ID: dsznajder.es7-react-js-snippets
+    Descripción: Extensions for React, React-Native and Redux in JS/TS with ES7+ syntax. Customizable. Built-in integration with prettier.
+    Versión: 4.1.0
+    Editor: dsznajder
+    Vínculo de VS Marketplace: https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+•   Nombre: Prettier - Code formatter
+    ID: esbenp.prettier-vscode
+    Descripción: Code formatter using prettier
+    Versión: 9.2.0
+    Editor: Prettier
+    Vínculo de VS Marketplace: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 
-### `npm run eject`
+## Autor ✒️
+-  Opera Santiago Javier (https://www.linkedin.com/in/santiago-opera-9718a5112)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Imagen del Proyecto
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Alt text](https://res.cloudinary.com/madriguera/image/upload/v1644278358/preview_nznaif.jpg "Preview")
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Expresiones de Gratitud 🎁
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Gracias a la ayuda del profesor Federico Osandon y a todos los tutores de la cursada 🤓

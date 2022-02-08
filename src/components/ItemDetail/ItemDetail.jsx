@@ -13,15 +13,14 @@ import { CartContext } from '../../context/cartContext.jsx';
 
 const ItemDetail = ({ producto }) => {
 
-  const  { cartList, agregarAlCarrito, mostrarCantidad } = useContext(CartContext)
+  const { agregarAlCarrito } = useContext(CartContext)
 
   const [show, setshow] = useState(true)
 
 
-  const onAdd = (counter) =>
-  {
+  const onAdd = (counter) => {
     setshow(false);
-    agregarAlCarrito({...producto, cantidad: counter})
+    agregarAlCarrito({ ...producto, cantidad: counter })
   }
 
 
@@ -41,25 +40,25 @@ const ItemDetail = ({ producto }) => {
           <ListGroupItem>Datelle 1</ListGroupItem>
           <ListGroupItem>Detalle 2</ListGroupItem>
 
-          
+
 
         </ListGroup>
 
-        
-        <div>
-          {show ? <ItemCount min={1} max={10} onAdd={onAdd}/> : 
-          
-          <div className='boton'>
-            <center><Link to='/cart'><Button>Ir al carrito</Button></Link>
-            <Link to='/'><Button>Continuar comprando</Button></Link></center>
-          </div>
+
+        <div className='centro'>
+          {show ? <ItemCount min={1} max={10} onAdd={onAdd} /> :
+
+            <div className='boton'>
+              <Link to='/cart'><Button>Ir al carrito</Button></Link>
+                <Link to='/'><Button>Continuar comprando</Button></Link>
+            </div>
           }
         </div>
-        
+
 
       </Card>
 
-      
+
     </div>
   );
 }

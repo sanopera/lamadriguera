@@ -12,7 +12,7 @@ function ItemList({ productos }) {
 
     <div>
 
-      {productos.map(prod => <Item titulo={prod.title} precio={prod.price} foto={prod.pictureUrl} id={prod.id}  /> )}
+      {productos.map(prod => <div key={prod.id}> <Item titulo={prod.title} precio={prod.price} foto={prod.pictureUrl} id={prod.id}  /> </div> )}
       
       
     </div>

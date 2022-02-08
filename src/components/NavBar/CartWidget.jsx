@@ -7,7 +7,7 @@ function CartWidget() {
     return (
         <div>
             
-            <a href="/#" className="carrito"> <BsCart3 /></a> 
+            <div className="carrito"> <BsCart3 /></div> 
             
         </div>
     )

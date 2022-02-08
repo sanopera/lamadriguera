@@ -3,7 +3,7 @@
 }
 
 .lista{
-    width: 40%;
+    width: 50%;
     margin: auto;
     margin-top: 2em;
     margin-bottom: 2em;
@@ -27,4 +27,29 @@
     border-radius: 8%;
     
 }
- 
+
+.form{
+    margin-top: 3em;
+}
+
+.form input{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0.2em;
+    text-align: center;
+}
+
+.form input:hover{
+
+    background-color: #cedbee;
+}
+
+.centro{
+        text-align: center;
+        align-items: center;
+
+}
+
+img{
+    width: 70px;
+}
